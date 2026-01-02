@@ -1129,10 +1129,15 @@ a:hover {
 .skill-logo {
     width: 1.2rem;
     height: 1.2rem;
-    filter: invert(0.93) sepia(0.5) hue-rotate(180deg) saturate(1.5);
-    transition: filter var(--duration-fast), transform var(--duration-fast);
+    object-fit: contain;
+    transition: transform var(--duration-fast);
     flex-shrink: 0;
 }
+
+.skill-chip:hover .skill-logo {
+    transform: scale(1.15);
+}
+
 
 .skill-chip:hover .skill-logo {
     filter: invert(1) sepia(1) hue-rotate(180deg) saturate(2);
