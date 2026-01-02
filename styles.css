@@ -245,17 +245,18 @@ a:hover {
    ============================================ */
 
 .hero {
-    min-height: 100vh;
+    min-height: calc(100vh - var(--navbar-height));
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
     overflow: hidden;
-    /* offset hero from the fixed navbar (uses CSS variable so mobile can adjust) */
-    margin-top: calc(var(--navbar-height));
-    padding-top: env(safe-area-inset-top, 0px);
+
+    /* CRITICAL FIX */
+    padding-top: calc(var(--navbar-height) + 1rem);
 }
+
 
 .parallax-bg {
     position: absolute;
@@ -328,16 +329,15 @@ a:hover {
 
 .hero-photo {
     width: 300px;
-    height: 400px;
-    object-fit: cover;
-    box-shadow: var(--shadow-lg);
-    transition: box-shadow 0.3s ease;
-}
-
-/* Ensure the photo centers the face on crop and has a softer appearance on small screens */
-.hero-photo {
-    object-position: center top;
+    max-width: 100%;
+    aspect-ratio: 3 / 4;          /* keeps portrait ratio */
+    height: auto;                 /* IMPORTANT */
+    object-fit: contain;          /* PREVENTS FACE CROPPING */
+    object-position: center;
     border-radius: 0.75rem;
+    background-color: var(--color-surface);
+    box-shadow: var(--shadow-lg);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .hero-photo:hover {
@@ -1597,6 +1597,29 @@ a:hover {
         font-size: 0.85rem;
     }
 }
+
+@media (max-width: 768px) {
+    .hero-photo {
+        width: min(240px, 80vw);
+        aspect-ratio: 3 / 4;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-photo {
+        width: min(220px, 85vw);
+        aspect-ratio: 3 / 4;
+        height: auto;
+    }
+}
+@media (max-width: 768px) {
+    .hero {
+        padding-top: calc(var(--navbar-height-mobile) + 2rem);
+    }
+}
+
 
 /* ============================================
    UTILITY CLASSES
