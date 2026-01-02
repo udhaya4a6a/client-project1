@@ -170,11 +170,11 @@ function handleNavbarEffect() {
     const scrollY = window.scrollY;
     
     if (scrollY > 50) {
-        navbar.style.boxShadow = '0 8px 32px rgba(102, 126, 234, 0.15)';
-        navbar.style.background = 'rgba(10, 14, 39, 0.95)';
+        navbar.style.boxShadow = '0 8px 24px rgba(46,42,38,0.08)';
+        navbar.style.background = 'rgba(245,241,232,0.98)';
     } else {
         navbar.style.boxShadow = 'none';
-        navbar.style.background = 'rgba(10, 14, 39, 0.7)';
+        navbar.style.background = 'rgba(245,241,232,0.95)';
     }
 }
 

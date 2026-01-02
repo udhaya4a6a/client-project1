@@ -24,6 +24,7 @@
             <ul class="nav-links">
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#research-experience" class="nav-link">Experience</a></li>
                 <li><a href="#research" class="nav-link">Research</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#publications" class="nav-link">Publications</a></li>
@@ -39,35 +40,39 @@
                 <!-- Clean gradient background -->
                 <defs>
                     <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:#0a0e27;stop-opacity:1" />
-                        <stop offset="50%" style="stop-color:#1a1f3a;stop-opacity:1" />
-                        <stop offset="100%" style="stop-color:#0f1429;stop-opacity:1" />
+                        <stop offset="0%" style="stop-color:#f5f1e8;stop-opacity:1" />
+                        <stop offset="50%" style="stop-color:#f3efe6;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#efe9df;stop-opacity:1" />
                     </linearGradient>
                 </defs>
                 <rect width="1200" height="600" fill="url(#heroGradient)"/>
                 
                 <!-- Animated waves -->
                 <g class="wave-group" opacity="0.15">
-                    <path d="M 0 300 Q 300 250 600 300 T 1200 300" stroke="#00d4ff" stroke-width="2" fill="none"/>
-                    <path d="M 0 350 Q 300 300 600 350 T 1200 350" stroke="#ff006e" stroke-width="2" fill="none" opacity="0.6"/>
-                    <path d="M 0 250 Q 300 200 600 250 T 1200 250" stroke="#8338ec" stroke-width="2" fill="none" opacity="0.5"/>
+                    <path d="M 0 300 Q 300 250 600 300 T 1200 300" stroke="#8a5a3d" stroke-width="2" fill="none"/>
+                    <path d="M 0 350 Q 300 300 600 350 T 1200 350" stroke="#7a8a5f" stroke-width="2" fill="none" opacity="0.6"/>
+                    <path d="M 0 250 Q 300 200 600 250 T 1200 250" stroke="#c8b99f" stroke-width="2" fill="none" opacity="0.5"/>
                 </g>
             </svg>
         </div>
 
-        <div class="hero-content">
-            <h1 class="hero-title">
-                <span class="accent">Priyadharshini S</span>
-            </h1>
-            <p class="hero-subtitle">
-                Electronics & Communication Engineer | Wireless Communication Researcher
-            </p>
-            <p class="hero-tagline">
-                Exploring signal processing, wireless systems optimization, and next-generation communication paradigms
-            </p>
-            <div class="hero-cta">
-                <a href="#research" class="cta-button primary">View Research</a>
-                <a href="#contact" class="cta-button secondary">Get in Touch</a>
+        <div class="hero-wrapper">
+            <div class="hero-photo-container">
+                <img src="images/profile.png" alt="Priyadharshini S" class="hero-photo">
+            </div>
+
+            <div class="hero-content">
+                <h1 class="hero-title">Priyadharshini S</h1>
+                <p class="hero-subtitle">
+                    Undergraduate Researcher | Wireless Sensing & Signal Processing
+                </p>
+                <p class="hero-tagline">
+                    Research-focused undergraduate specializing in reconfigurable intelligent surfaces (RIS), integrated sensing and communication (ISAC), sparse recovery, and optimization-driven signal processing for next-generation wireless systems.
+                </p>
+                <div class="hero-cta">
+                    <a href="#research" class="cta-button primary">View Research</a>
+                    <a href="#contact" class="cta-button secondary">Get in Touch</a>
+                </div>
             </div>
         </div>
 
@@ -148,6 +153,57 @@
                     Comprehensive coursework in digital signal processing, wireless communication systems, VLSI design, 
                     and microwave engineering. Active participation in research projects focusing on advanced wireless technologies.
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Experience Section -->
+    <section class="research-experience" id="research-experience" role="region" aria-label="Research experience section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Research Experience</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="experience-card fade-in">
+                <div class="experience-header">
+                    <div class="experience-info">
+                        <h3 class="experience-title">Research Intern – Telecom & Wireless Sensing (TelWiSe) Lab</h3>
+                        <p class="experience-org">Indian Institute of Technology Madras</p>
+                    </div>
+                    <div class="experience-duration">
+                        <span class="duration-badge">Jan 2026 – Jun 2026</span>
+                        <span class="duration-period">6 Months</span>
+                    </div>
+                </div>
+
+                <ul class="experience-highlights">
+                    <li>Selected for a full-time research internship under <strong>Prof. K. Gridhar</strong>, Department of Electrical Engineering, IIT Madras.</li>
+                    <li>Working with the TelWiSe group on <strong>signal processing for wireless communications and RF sensing</strong>.</li>
+                    <li>Assigned to the <strong>multistatic radar systems</strong> research team to study published work and extend existing algorithms.</li>
+                    <li>Gaining hands-on exposure to <strong>distributed radar signal processing</strong>, broadband access solutions, and custom air-interface design.</li>
+                </ul>
+            </div>
+
+            <div class="experience-card fade-in" style="--delay: 0.1s">
+                <div class="experience-header">
+                    <div class="experience-info">
+                        <h3 class="experience-title">Remote Research Intern – SPWiCom Lab</h3>
+                        <p class="experience-org">Indian Institute of Science (IISc), Bangalore</p>
+                    </div>
+                    <div class="experience-duration">
+                        <span class="duration-badge">Nov 2025 – Present</span>
+                        <span class="duration-period">Ongoing</span>
+                    </div>
+                </div>
+
+                <ul class="experience-highlights">
+                    <li>Working with the <strong>Signal Processing for Wireless Communications (SPWiCom)</strong> Lab under <strong>Prof. Sudhan Majhi</strong>.</li>
+                    <li>Research focused on <strong>RIS-assisted full-duplex communication</strong> for future wireless networks.</li>
+                    <li>Studying <strong>interference-aware RIS designs</strong> to mitigate self-interference and loop interference in full-duplex systems.</li>
+                    <li>Analyzing performance under <strong>realistic fading models</strong> and channel reciprocity assumptions relevant to 6G systems.</li>
+                    <li>Contributing to literature review and problem formulation for IRS-enabled full-duplex architectures.</li>
+                </ul>
             </div>
         </div>
     </section>
